@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Style sheet -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- font awesome -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- font google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&family=Open+Sans:wght@400;700&family=Roboto:wght@100;300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&family=Open+Sans:wght@400;700&family=Poppins:wght@200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <title>Movies Website</title>
+  </head>
+  <body>
+    <!-- start sidebar -->
+    <div class="side-bar">
+      <div class="sidebar-menu">
+        <ul>
+          <li>
+            <a href="#" id="now-playing" class="active">
+              <span>Now Playing</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" id="popular"><span> Popular</span> </a>
+          </li>
+          <li>
+            <a href="#" id="rated"> <span>Top-Rated</span> </a>
+          </li>
+          <li>
+            <a href="#" id="Upcoming"><span> Upcoming</span> </a>
+          </li>
+          <li>
+            <!-- <a href="#" id="News"><span> News</span> </a> -->
+          </li>
+          <li>
+            <a href="#contact-us"><span> Contact Us </span></a>
+          </li>
+        </ul>
+        <div class="social-contact">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"> <i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-solid fa-globe first"></i></a>
+        </div>
+        <div class="credit">
+          copyright @ 2022 by <br /><span>Ahmed Salah</span>
+        </div>
+      </div>
+    </div>
+    <!-- End sidebar -->
+    <!-- start navigationBar  -->
+    <div class="navigation">
+      <div class="logo">
+        <img src="images/logo.png" alt="logo" />
+      </div>
+      <div class="menu-bars">
+        <i class="fa-solid fa-bars" id="menu-bars"></i>
+      </div>
+      <div class="icons">
+        <div>
+          <div class="first">
+            <i class="fa-solid fa-globe"></i>
+          </div>
+          <div class="second">
+            <i class="fa-solid fa-share-nodes second"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End navigationBar -->
+
+    <!-- start main content -->
+    <div class="main-content">
+      <header>
+        <div class="search-wrapper">
+          <form class="searchApi" id="searchApi">
+            <input
+              type="text"
+              class="search-control"
+              id="search-input"
+              placeholder=""
+            />
+            <span class="focus">get movies by word..</span>
+          </form>
+          <form class="searchPage" id="searchPage">
+            <input
+              type="text"
+              class="search-control"
+              id="search"
+              placeholder=""
+            />
+            <span class="focus">search..</span>
+          </form>
+        </div>
+      </header>
+      <div class="title" id="title"></div>
+      <div id="cards" class="cards"></div>
+      <!-- start section contact us  -->
+      <div class="contact-us" id="contact-us">
+        <h2>Contact Us...</h2>
+        <form class="row" id="form" action="/" method="get">
+          <div class="search-wrapper">
+            <div class="searchApi">
+              <input
+                type="text"
+                class="search-control"
+                id="user-name"
+                placeholder=""
+              />
+              <div id="invalid-name" class="invalid">
+                <i class="fa fa-times invalid-icon"></i>
+              </div>
+              <div id="valid-name" class="valid">
+                <i class="fa-solid fa-check valid-icon"></i>
+              </div>
+              <span class="focus">Enter Your Name</span>
+              <span id="name-error" class="text"></span>
+            </div>
+          </div>
+          <div class="search-wrapper">
+            <div class="searchApi">
+              <input
+                type="text"
+                class="search-control"
+                id="email"
+                placeholder=""
+                value="email"
+              />
+              <div id="invalid-email" class="invalid">
+                <i class="fa fa-times invalid-icon"></i>
+              </div>
+              <div id="valid-email" class="valid">
+                <i class="fa-solid fa-check valid-icon"></i>
+              </div>
+              <span class="focus">Enter Your Email</span>
+              <span id="email-error" class="text"></span>
+            </div>
+          </div>
+          <div class="search-wrapper">
+            <div class="searchApi">
+              <input
+                type="text"
+                class="search-control"
+                id="phone"
+                placeholder=""
+                value="01"
+              />
+              <div class="invalid" id="invalid-phone">
+                <i class="fa fa-times invalid-icon"></i>
+              </div>
+              <div class="valid" id="valid-phone">
+                <i class="fa-solid fa-check valid-icon"></i>
+              </div>
+              <span class="focus">Enter Phone</span>
+              <span id="phone-error" class="text"></span>
+            </div>
+          </div>
+          <div class="search-wrapper">
+            <div class="searchApi">
+              <input
+                type="text"
+                class="search-control"
+                id="age"
+                placeholder=""
+                value=""
+              />
+              <div class="invalid" id="invalid-age">
+                <i class="fa fa-times invalid-icon"></i>
+              </div>
+              <div class="valid" id="valid-age">
+                <i class="fa-solid fa-check valid-icon"></i>
+              </div>
+              <span class="focus">Enter Your Age</span>
+              <span id="age-error" class="text"></span>
+            </div>
+          </div>
+
+          <div class="search-wrapper">
+            <div class="searchApi">
+              <input
+                type="password"
+                class="search-control"
+                id="password"
+                placeholder=""
+                value="pass"
+              />
+              <div class="invalid" id="invalid-password">
+                <i class="fa fa-times invalid-icon"></i>
+              </div>
+              <div class="valid" id="valid-password">
+                <i class="fa-solid fa-check valid-icon"></i>
+              </div>
+              <span class="focus">Enter Your Password</span>
+              <span id="password-error" class="text"></span>
+            </div>
+          </div>
+
+          <div class="search-wrapper">
+            <div class="searchApi">
+              <input
+                type="password"
+                class="search-control"
+                id="Repassword"
+                placeholder=""
+                value=""
+              />
+              <div class="invalid" id="invalid-rePassword">
+                <i class="fa fa-times invalid-icon"></i>
+              </div>
+              <div class="valid" id="valid-rePassword">
+                <i class="fa-solid fa-check valid-icon"></i>
+              </div>
+              <span class="focus">Enter Your RePassword</span>
+              <span id="rePassword-error" class="text"></span>
+            </div>
+          </div>
+
+          <div class="submit">
+            <button type="submit" class="btn" id="btn">Submit</button>
+          </div>
+        </form>
+      </div>
+      <!-- end section contact us  -->
+    </div>
+
+    <!-- End main content -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
