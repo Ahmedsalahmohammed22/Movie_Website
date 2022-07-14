@@ -165,7 +165,7 @@ function validateForm(){
                                            /* *********************************************** */
     // check RePassword
     let Repassword = document.getElementById("Repassword").value.trim();
-    if(password === Repassword){
+    if(password === Repassword && Repassword!== ""){
         ValidRePassword.classList.add("activeForm");
         inValidRePassword.classList.remove("activeForm");
         rePasswordError.classList.remove("activeText");
